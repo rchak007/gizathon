@@ -1413,7 +1413,7 @@ Enhance the security of your account by adding additional random input:
 Show mnemonic? [Y/n]: Y
 Create Passphrase to encrypt account:
 Repeat for confirmation:
-INFO: Newly generated mnemonic is:XXX
+INFO: Newly generated mnemonic is:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 SUCCESS: A new account '0x39BaE1e8dEc32d94181bCDa1DC25218Ef57a12c2' with HDPath m/44'/60'/0'/0/0 has been added with the id 'giza1'
 
 sent .1 ETH from my other Sepolia;
@@ -1538,4 +1538,79 @@ $ giza verify --proof-id 967
 (giza3)
 
 ```
+
+
+
+
+
+
+
+
+
+# Portfolio Manager Project
+
+
+
+Sepolia - used chrome - on LL laptop - centralG profile for metamask.
+
+
+
+## documentation
+
+### Ape
+
+https://docs.apeworx.io/ape/stable/userguides/accounts.html
+
+
+
+https://docs.stackup.sh/docs/supported-erc-20-tokens
+
+
+
+### ETH to token swap
+
+https://www.quicknode.com/guides/defi/dexs/how-to-swap-tokens-on-uniswap-with-ethersjs
+
+
+
+
+
+https://ethereum.stackexchange.com/questions/111799/programmatically-wrap-eth-by-interacting-with-wrapped-ether-contract-in-web3-py
+
+
+
+
+
+
+
+
+
+This is WETH mint;
+
+[Sepolia Transaction Hash (Txhash) Details | Etherscan](https://sepolia.etherscan.io/tx/0x93e23ff8660d8ff10be6779cafdfac2cb1a0de03785a7bd996bb24a72ca03c25)
+
+
+
+
+
+### Create Agent
+
+
+
+
+
+https://docs.gizatech.xyz/tutorials/ai-agents/using-arbitrum-with-ai-agents
+
+looking at Aritrum example
+
+```bash
+giza agents create --endpoint-id <endpoint-id> --name <agent name> --description <agent description>
+
+From earlier Diabetes example- gizaTest1.ipynb
+[giza][2024-05-29 23:53:51.335] Endpoint created with id -> 234 ✅
+
+giza agents create --endpoint-id 234 --name gizaTest1 --description diabetesTest
+```
+
+
 
