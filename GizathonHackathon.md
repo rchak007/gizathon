@@ -1614,3 +1614,83 @@ giza agents create --endpoint-id 234 --name gizaTest1 --description diabetesTest
 
 
 
+
+
+
+
+
+
+## etfXBG.ipynb
+
+
+
+
+
+### transpile
+
+### Model ID 690
+
+### Version 1
+
+```
+$ giza transpile etf_xgb1.json --output-path etf_xgb1
+[giza][2024-06-03 19:00:12.216] No model id provided, checking if model exists ✅
+[giza][2024-06-03 19:00:12.229] Model name is: etf_xgb1
+[giza][2024-06-03 19:00:12.813] Model Created with id -> 690! ✅
+[giza][2024-06-03 19:00:13.400] Version Created with id -> 1! ✅
+[giza][2024-06-03 19:00:13.413] Sending model for transpilation ✅
+[giza][2024-06-03 19:01:06.244] Transpilation is fully compatible. Version compiled and Sierra is saved at Giza ✅
+[giza][2024-06-03 19:01:07.583] Downloading model ✅
+[giza][2024-06-03 19:01:07.594] model saved at: etf_xgb1
+```
+
+
+
+### Deploy an inference endpoint
+
+
+
+```bash
+$ giza endpoints deploy --model-id 690 --version-id 1
+▰▰▰▰▱▱▱ Creating endpoint!
+[giza][2024-06-03 19:03:08.874] Endpoint is successful ✅
+[giza][2024-06-03 19:03:08.880] Endpoint created with id -> 261 ✅
+[giza][2024-06-03 19:03:08.882] Endpoint created with endpoint URL: https://endpoint-giza1-690-1-62d762c5-7i3yxzspbq-ew.a.run.app 🎉
+
+
+```
+
+
+
+
+
+### Ape account 
+
+already did it.
+
+
+
+### Create and Agent using the CLI
+
+
+
+```bash
+giza agents create --model-id <model-id> --version-id <version-id> --name <agent name> --description <agent description>
+
+giza agents create --model-id 665 --version-id 1 --name gizaTest1 --description diabetesTest
+
+--model-id 665 --version-id 1
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
