@@ -1648,7 +1648,7 @@ $ giza transpile etf_xgb1.json --output-path etf_xgb1
 
 ### Deploy an inference endpoint
 
-
+(see later issue and then created again with --size M)
 
 ```bash
 $ giza endpoints deploy --model-id 690 --version-id 1
@@ -1677,9 +1677,34 @@ already did it.
 ```bash
 giza agents create --model-id <model-id> --version-id <version-id> --name <agent name> --description <agent description>
 
-giza agents create --model-id 665 --version-id 1 --name gizaTest1 --description diabetesTest
+giza agents create --model-id 690 --version-id 1 --name etfXGB --description etfXGB
 
---model-id 665 --version-id 1
+
+
+$ giza agents create --model-id 690 --version-id 1 --name etfXGB --description etfXGB
+[giza][2024-06-03 19:11:50.498] Creating agent ✅
+[giza][2024-06-03 19:11:50.506] Using model id and version id to create agent
+[giza][2024-06-03 19:11:50.780] Select an existing account to create the agent.
+[giza][2024-06-03 19:11:50.787] Available accounts are:
+┌──────────┐
+│ Accounts │
+├──────────┤
+│  giza1   │
+└──────────┘
+Enter the account name: giza1
+{
+  "id": 34,
+  "name": "etfXGB",
+  "description": "etfXGB",
+  "parameters": {
+    "model_id": 690,
+    "version_id": 1,
+    "endpoint_id": 261,
+    "account": "giza1"
+  },
+  "created_date": "2024-06-04T02:11:57.598948",
+  "last_update": "2024-06-04T02:11:57.598948"
+}
 ```
 
 
@@ -1688,7 +1713,99 @@ giza agents create --model-id 665 --version-id 1 --name gizaTest1 --description 
 
 
 
+### Issue - Run Verifiable Inference
 
+
+
+
+
+Discord question 
+
+![image-20240604185728693](./Images/image-20240604185728693.png)
+
+
+
+
+
+#### Gonzalo Mellizo-Soto *—* Today at 3:42 AM
+
+@rchak007 I've checked the endpoint and there are multiple errors:
+
+- Endpoint size is too small and its killing the request due to Out of Memory (OOM), for this I encourage to delete de endpoint `giza endpoints delete -e {endpoint id}` and recreate it with size M `giza endpoints deploy --size M ...`
+- Endpoint is panicking with `called Result::unwrap() on an Err value: FromStrError` this usually happens when `model_category` is not defined but I see it in the notebook so maybe is a test
+- `Deserialize the request body failed: Error("EOF while parsing a value", line: 1, column: 0)` this is usually because the data is not in the correct format, but the notebook seems to be fine
+
+Remember that you can retrieve the logs with `giza endpoints logs -e {endpoint id}` My take is to perform the first action to recreate the endpoint with a bigger size
+
+
+
+
+
+![image-20240604190037500](./Images/image-20240604190037500.png)
+
+
+
+#### Deploy an inference endpoint
+
+```bash
+giza endpoints delete -e {endpoint id}
+
+$ giza endpoints delete -e 261
+[giza][2024-06-04 18:58:56.610] Deleting endpoint 261 ✅
+[giza][2024-06-04 18:58:57.122] Endpoint 261 deleted ✅
+(giza3)
+
+giza endpoints deploy --size M --model-id 690 --version-id 1
+
+$ giza endpoints deploy --size M --model-id 690 --version-id 1
+▰▰▰▰▰▱▱ Creating endpoint!
+[giza][2024-06-04 19:01:39.665] Endpoint is successful ✅
+[giza][2024-06-04 19:01:39.671] Endpoint created with id -> 269 ✅
+[giza][2024-06-04 19:01:39.673] Endpoint created with endpoint URL: https://endpoint-giza1-690-1-ea92df7f-7i3yxzspbq-ew.a.run.app 🎉
+
+
+
+giza endpoints delete -e 269
+$ giza endpoints delete -e 269
+[giza][2024-06-04 19:17:31.463] Deleting endpoint 269 ✅
+[giza][2024-06-04 19:17:31.912] Endpoint 269 deleted ✅
+
+giza endpoints deploy --size L --model-id 690 --version-id 1
+
+```
+
+
+
+### Create Agent
+
+giza agents create --model-id 690 --version-id 1 --name etfXGB --description etfXGB
+
+```bash
+$ giza agents create --model-id 690 --version-id 1 --name etfXGB --description etfXGB
+[giza][2024-06-04 19:06:18.403] Creating agent ✅
+[giza][2024-06-04 19:06:18.411] Using model id and version id to create agent
+[giza][2024-06-04 19:06:18.672] Select an existing account to create the agent.
+[giza][2024-06-04 19:06:18.676] Available accounts are:
+┌──────────┐
+│ Accounts │
+├──────────┤
+│  giza1   │
+└──────────┘
+Enter the account name: giza1
+{
+  "id": 37,
+  "name": "etfXGB",
+  "description": "etfXGB",
+  "parameters": {
+    "model_id": 690,
+    "version_id": 1,
+    "endpoint_id": 269,
+    "account": "giza1"
+  },
+  "created_date": "2024-06-05T02:06:25.417540",
+  "last_update": "2024-06-05T02:06:25.417540"
+}
+```
 
 
 
