@@ -1770,13 +1770,17 @@ $ giza endpoints delete -e 269
 [giza][2024-06-04 19:17:31.463] Deleting endpoint 269 ✅
 [giza][2024-06-04 19:17:31.912] Endpoint 269 deleted ✅
 
-giza endpoints deploy --size L --model-id 690 --version-id 1
-
+giza endpoints deploy --size XL --model-id 690 --version-id 1
+$ giza endpoints deploy --size XL --model-id 690 --version-id 1
+▰▰▱▱▱▱▱ Creating endpoint!
+[giza][2024-06-04 19:18:42.443] Endpoint is successful ✅
+[giza][2024-06-04 19:18:42.448] Endpoint created with id -> 270 ✅
+[giza][2024-06-04 19:18:42.451] Endpoint created with endpoint URL: https://endpoint-giza1-690-1-ae65a898-7i3yxzspbq-ew.a.run.app 🎉
 ```
 
 
 
-### Create Agent
+### Create Agent#2 and #3
 
 giza agents create --model-id 690 --version-id 1 --name etfXGB --description etfXGB
 
@@ -1805,9 +1809,123 @@ Enter the account name: giza1
   "created_date": "2024-06-05T02:06:25.417540",
   "last_update": "2024-06-05T02:06:25.417540"
 }
+
+
+
+For XL;
+giza agents create --model-id 690 --version-id 1 --endpoint-id 270 --name etfXGB2 --description etfXGB2
+
+
+$ giza agents create --model-id 690 --version-id 1 --endpoint-id 270 --name etfXGB2 --description etfXGB2
+[giza][2024-06-04 19:24:46.361] Creating agent ✅
+[giza][2024-06-04 19:24:46.370] Using endpoint id to create agent, retrieving model id and version id
+[giza][2024-06-04 19:24:46.626] Select an existing account to create the agent.
+[giza][2024-06-04 19:24:46.629] Available accounts are:
+┌──────────┐
+│ Accounts │
+├──────────┤
+│  giza1   │
+└──────────┘
+Enter the account name: giza1
+{
+  "id": 40,
+  "name": "etfXGB2",
+  "description": "etfXGB2",
+  "parameters": {
+    "model_id": 690,
+    "version_id": 1,
+    "endpoint_id": 270,
+    "account": "giza1"
+  },
+  "created_date": "2024-06-05T02:24:51.304557",
+  "last_update": "2024-06-05T02:24:51.304557"
+}
+```
+
+
+
+### giza agents list
+
+### giza agents delete
+
+```bash
+giza agents list
+giza agents delete --agent-id 41
 ```
 
 
 
 
+
+### giza-BETF-short-LIN-wip.ipynb
+
+this is one that worked for SS.
+
+
+
+
+
+
+
+
+
+![image-20240605213135248](./Images/image-20240605213135248.png)
+
+
+
+
+
+
+
+### ape-linea plug in
+
+linea discord let me know this.
+
+
+
+[ape-linea/ape_linea at main · Consensys/ape-linea · GitHub](https://github.com/Consensys/ape-linea)
+
+
+
+but got some error - 
+
+![image-20240607011937602](./Images/image-20240607011937602.png)
+
+So chatGpt asked to install - **Install Microsoft C++ Build Tools**:
+
+
+
+
+
+
+
+Linea Router address Uniswap
+
+
+
+![image-20240607012215636](./Images/image-20240607012215636.png)
+
+
+
+
+
+
+
+### zkSync- Ape
+
+
+
+https://github.com/beamer-bridge/beamer/issues/2150
+
+
+
+
+
+### ZkSync Remix deploy
+
+https://console.chainstack.com/projects
+
+
+
+there were 2 plugins;
 

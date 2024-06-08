@@ -1,10 +1,15 @@
 # source: https://docs.uniswap.org/contracts/v3/reference/deployments
+
+# - https://docs.syncswap.xyz/syncswap/smart-contracts/smart-contracts -- for ZkSynch Sepolia - Chian id 300
+# Arbitrum One - 42161
+# Linea Sepolia testnet has a chain ID of 59141.
 ADDRESSES = {
     "WETH": {
         1: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
         11155111: "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14",
         5: "0xB4FBF271143F4FBf7B91A5ded31805e42b2208d6",
         42161: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+        300: "0xe5d7c2a44ffddf6b295a15c148167daaaf5cf34f", 
     },
     "WBTC": {
         1: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -24,6 +29,7 @@ ADDRESSES = {
         11155111: "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
         5: "",
         42161: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+        59141: "0xee491556E9a82Bc5728886Fa70F82916269c93fB",
     },
     "NonfungiblePositionManager": {
         1: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
@@ -42,5 +48,6 @@ ADDRESSES = {
         11155111: "0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E",
         5: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
         42161: "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
+        300: "0x80e38291e06339d10AAB483C65695D004dBD5C69",
     },
 }
