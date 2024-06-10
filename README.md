@@ -114,7 +114,13 @@ https://github.com/rchak007/gizathon/blob/main/gizaAgent-INS-LIN.py
 - **Transpile the Model**: `giza transpile linear_regression-betf6.onnx --output-path verifiable_betf_lr6`
 - **Deploy the Endpoint**: `giza endpoints deploy --model-id 739 --version-id 1`
 - **Create the Agent**: `giza agents create --model-id 739 --version-id 1 --endpoint-id 314 --name BETF6 --description BETF6`
-- **Run the Streamlit App**: `streamlit run gizaAgentTest-INS-LIN.py`
+- **Run the Streamlit App**: `streamlit run gizaAgent-INS-LIN.py`
+
+
+
+
+
+
 
 ## Benefits and Future Work
 
@@ -126,4 +132,4 @@ By integrating AI and blockchain, we create a system that is not only intelligen
 
 ## Conclusion
 
-This project demonstrates the powerful combination of AI and Web3 technologies. By leveraging Giza's tools and Streamlit, we create a robust system for making verifiable predictions and executing smart contracts, opening new possibilities for secure and intelligent financial applications.
+This project demonstrates the powerful combination of AI and Web3 technologies. By leveraging Giza's tools, Ape's Web3 components and Streamlit, we create a robust system for making verifiable predictions and executing smart contracts, opening new possibilities for secure and intelligent financial applications.
