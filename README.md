@@ -235,6 +235,20 @@ https://sepolia.etherscan.io/tx/0xa35b93e53ac4363d9fab90fad61882e15debd6c3194b07
 
 
 
+
+
+### Final wallet 
+
+now our Metamask wallet also reflects the SWAP update.
+
+
+
+![image-20240609215653223](./Images/image-20240609215653223.png)
+
+
+
+
+
 ### Terminal logs 
 
 
@@ -289,7 +303,7 @@ result =  0
 
 ### Notes/Assumptions/Issues
 
-- currently the Swap Router for WETH/USDC pool does not reflect current prices that's why at this point this is just demo. In live Mainnet you would get correct rebalance.
+- currently the Swap Router for WETH/USDC pool does not reflect current prices that's why at this point this is just demo and only WETH shows correct status. In live Mainnet you would get correct rebalance. 
 - Right now even when Agent gets the prediction the value extraction from AgentResult class object is not working and need to be worked out with Gize. That's why the app has manual input of the BTC prediction price.
 - Currently the BTC price prediction model is simplified - in future we have to make these predictions more robust but this project was just to execute the concept.
 
