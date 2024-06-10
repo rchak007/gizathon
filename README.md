@@ -4,6 +4,10 @@
 
 
 
+
+
+
+
 # Integrating AI and Web3 with Giza
 
 ## Overview
@@ -85,14 +89,34 @@ Through the agent, we connect the predictions to smart contract actions on the E
 3. **Agent Setup**: We create an agent that interfaces with the deployed model and the Ethereum blockchain.
 4. **Streamlit Application**: Users interact with the model and blockchain through a Streamlit app, which fetches real-time data, makes predictions, and triggers smart contract actions.
 
-### Commands and Execution
+
+
+## Code Files
+
+
+
+### Train model, Transpile, deploy Endpoint
+
+https://github.com/rchak007/gizathon/blob/main/giza-BETF-short-LIN-wip.ipynb
+
+
+
+### Agent acting on ETH Sepolia Blockchain
+
+https://github.com/rchak007/gizathon/blob/main/gizaAgent-INS-LIN.py
+
+
+
+
+
+## Commands and Execution
 
 - **Transpile the Model**: `giza transpile linear_regression-betf6.onnx --output-path verifiable_betf_lr6`
 - **Deploy the Endpoint**: `giza endpoints deploy --model-id 739 --version-id 1`
 - **Create the Agent**: `giza agents create --model-id 739 --version-id 1 --endpoint-id 314 --name BETF6 --description BETF6`
 - **Run the Streamlit App**: `streamlit run gizaAgentTest-INS-LIN.py`
 
-### Benefits and Future Work
+## Benefits and Future Work
 
 By integrating AI and blockchain, we create a system that is not only intelligent but also transparent and trustworthy. Users can confidently rely on the predictions, knowing they are verifiable and tamper-proof. Future enhancements could include:
 
@@ -100,6 +124,6 @@ By integrating AI and blockchain, we create a system that is not only intelligen
 - Integrating additional cryptocurrencies and financial instruments.
 - Enhancing the user interface for a more seamless experience.
 
-### Conclusion
+## Conclusion
 
 This project demonstrates the powerful combination of AI and Web3 technologies. By leveraging Giza's tools and Streamlit, we create a robust system for making verifiable predictions and executing smart contracts, opening new possibilities for secure and intelligent financial applications.
