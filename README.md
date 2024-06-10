@@ -10,6 +10,42 @@
 
 # Integrating AI and Web3 with Giza
 
+
+
+## Code Files
+
+
+
+### Train model, Transpile, deploy Endpoint
+
+https://github.com/rchak007/gizathon/blob/main/giza-BETF-short-LIN-wip.ipynb
+
+
+
+### Agent acting on ETH Sepolia Blockchain
+
+https://github.com/rchak007/gizathon/blob/main/gizaAgent-INS-LIN.py
+
+
+
+## Videos 
+
+Download to view
+
+Streamlit Demo
+
+https://github.com/rchak007/gizathon/blob/main/Images/Steamlit.mkv
+
+Project Objective
+
+https://github.com/rchak007/gizathon/blob/main/Images/ProjectInfo.mkv
+
+
+
+
+
+
+
 ## Overview
 
 This project showcases the innovative integration of machine learning (ML) models with blockchain technology to create verifiable predictions that trigger smart contract actions. Using Giza, we bridge the gap between AI and Web3 by training a machine learning model, converting it into a verifiable format, and deploying it to a cloud endpoint. We then create an agent to make predictions with the model and execute smart contracts based on these predictions, all within a Streamlit application for an interactive user experience.
@@ -105,20 +141,6 @@ Through the agent, we connect the predictions to smart contract actions on the E
 4. **Streamlit Application**: Users interact with the model and blockchain through a Streamlit app, which fetches real-time data, makes predictions, and triggers smart contract actions.
 
 
-
-## Code Files
-
-
-
-### Train model, Transpile, deploy Endpoint
-
-https://github.com/rchak007/gizathon/blob/main/giza-BETF-short-LIN-wip.ipynb
-
-
-
-### Agent acting on ETH Sepolia Blockchain
-
-https://github.com/rchak007/gizathon/blob/main/gizaAgent-INS-LIN.py
 
 
 
