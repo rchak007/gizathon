@@ -1929,3 +1929,346 @@ https://console.chainstack.com/projects
 
 there were 2 plugins;
 
+![image-20240607212205723](./Images/image-20240607212205723.png)
+
+
+
+
+
+
+
+![image-20240607212217511](./Images/image-20240607212217511.png)
+
+
+
+
+
+### zkSync with ape
+
+https://github.com/beamer-bridge/beamer/issues/2150
+
+
+
+
+
+### Agent run 6/8/24 12:25AM - 
+
+#### Run1
+
+![image-20240608002652398](./Images/image-20240608002652398.png)
+
+
+
+
+
+#### Run2
+
+![image-20240608002852007](./Images/image-20240608002852007.png)
+
+
+
+
+
+
+
+#### Run3 success
+
+6/8/24 - 12:43 am
+
+![image-20240608004313876](./Images/image-20240608004313876.png)
+
+
+
+
+
+### Testing
+
+
+
+
+
+
+
+
+
+#### 1st screen - 
+
+
+
+![image-20240608233333708](./Images/image-20240608233333708.png)
+
+
+
+
+
+
+
+
+
+#### 2nd screen - 
+
+Shows current allocation - then from Model recommended allocation after user "Call Agent and give Rebalance Advise"
+
+This will use the predicted BTC value from the Model which uses ETF inflows to predict this.
+
+Based on BTC value we actually for now use WETH as our investment vehicle which we can assume moves similar to BTC.
+
+
+
+![image-20240608233444573](./Images/image-20240608233444573.png)
+
+
+
+#### 3rd screen
+
+
+
+##### approve 
+
+INFO:ape:Submitted https://sepolia.etherscan.io/tx/0x83feaa25b642f8908e19990b8d621d705cc0631a092eed113a06b26d2706bf87
+
+##### swap
+
+INFO:ape:Submitted https://sepolia.etherscan.io/tx/0xbe88be90f90fb6383a6f2fb0cafd5b11375a25c0c26a4f6949e739cec5a83d1b
+
+
+
+![image-20240608234838500](./Images/image-20240608234838500.png)
+
+
+
+
+
+
+
+![image-20240608235027706](./Images/image-20240608235027706.png)
+
+
+
+
+
+```bash
+Current BTC Price: $69322
+weth address:  0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14
+INFO:agent_logger:Executing contract
+Your WETH balance: 0.03
+Your WUSDC balance: 13.157838
+func is  <function perform_swap at 0x000001F9F83AE3E0>
+args are -  0.03 13.157838 0.017473251445257073 59.306379675672936 0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14 0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238 0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E 3000 0x39BaE1e8dEc32d94181bCDa1DC25218Ef57a12c2
+kwargs are -
+WARNING:ape:Using cached key for giza1
+INFO:ape:Submitted https://sepolia.etherscan.io/tx/0x83feaa25b642f8908e19990b8d621d705cc0631a092eed113a06b26d2706bf87
+WARNING:ape:Using cached key for giza1
+INFO:ape:Submitted https://sepolia.etherscan.io/tx/0xbe88be90f90fb6383a6f2fb0cafd5b11375a25c0c26a4f6949e739cec5a83d1b
+std out =  target_eth_amount  =  0.017473251445257073
+current_eth_balance =  0.03
+target_usdc_value =  59.306379675672936
+current_usdc_balance=  13.157838
+eth diff =  -0.012526748554742926
+usdc diff =  46.14854167567294
+Swapping 0.012526748554742926 ETH or in Wei 1.2526748554742926e+16
+intEthDiff =  12526748554742926
+Approving WETH for swap
+WARNING: Using cached key for giza1
+INFO: Submitted https://sepolia.etherscan.io/tx/0x83feaa25b642f8908e19990b8d621d705cc0631a092eed113a06b26d2706bf87
+Caught an exception of type: ProviderError
+swap params =  ('0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14', '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238', 3000, '0x39BaE1e8dEc32d94181bCDa1DC25218Ef57a12c2', 12526748554742926, 0, 0)
+WARNING: Using cached key for giza1
+INFO: Submitted https://sepolia.etherscan.io/tx/0xbe88be90f90fb6383a6f2fb0cafd5b11375a25c0c26a4f6949e739cec5a83d1b
+Caught an exception of type: ProviderError
+
+Confirmations (2/2): 100%|####################################################################################| 2/2 [00:29<00:00, 14.57s/it]
+Confirmations (2/2): 100%|####################################################################################| 2/2 [00:29<00:00, 14.54s/it]
+
+result =  0
+```
+
+
+
+
+
+
+
+
+
+![image-20240608235903705](./Images/image-20240608235903705.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### issue reading Pred Value
+
+![image-20240609004433421](./Images/image-20240609004433421.png)
+
+
+
+
+
+![image-20240609013014617](./Images/image-20240609013014617.png)
+
+
+
+
+
+
+
+Test 6/9/24 - 5PM
+
+![image-20240609170051908](./Images/image-20240609170051908.png)
+
+
+
+
+
+![image-20240609171528975](./Images/image-20240609171528975.png)
+
+
+
+
+
+
+
+#### test 6/9/24 - 528 PM
+
+![image-20240609171814525](./Images/image-20240609171814525.png)
+
+
+
+
+
+
+
+
+
+![image-20240609182800687](./Images/image-20240609182800687.png)
+
+
+
+
+
+
+
+
+
+```bash
+739
+1
+Current BTC Price: $69561
+st.session_state.input_done =  True
+st.session_state.prediction_value =  65000
+func is  <function perform_swap at 0x00000171508A8F40>
+args are -  0.017473251445257073 18.773477 0.010909963540080699 42.998638290885054 0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14 0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238 0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E 3000 0x39BaE1e8dEc32d94181bCDa1DC25218Ef57a12c2
+kwargs are -
+WARNING:ape:Using cached key for giza1
+INFO:ape:Submitted https://sepolia.etherscan.io/tx/0x0fe8689f193b378290a64c2dede5cfb6c020cb1752f259354287d22d0f4c0d3f
+WARNING:ape:Using cached key for giza1
+INFO:ape:Submitted https://sepolia.etherscan.io/tx/0x3712e6309c08f08a491e5d1f9d6f48822b0e39b6d456357e459c8519c604e71c
+std out =  target_eth_amount  =  0.010909963540080699
+current_eth_balance =  0.017473251445257073
+target_usdc_value =  42.998638290885054
+current_usdc_balance=  18.773477
+eth diff =  -0.006563287905176374
+usdc diff =  24.225161290885055
+Swapping 0.006563287905176374 ETH or in Wei 6563287905176374.0
+intEthDiff =  6563287905176374
+Approving WETH for swap
+WARNING: Using cached key for giza1
+INFO: Submitted https://sepolia.etherscan.io/tx/0x0fe8689f193b378290a64c2dede5cfb6c020cb1752f259354287d22d0f4c0d3f
+Caught an exception of type: ProviderError
+swap params =  ('0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14', '0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238', 3000, '0x39BaE1e8dEc32d94181bCDa1DC25218Ef57a12c2', 6563287905176374, 0, 0)
+WARNING: Using cached key for giza1
+INFO: Submitted https://sepolia.etherscan.io/tx/0x3712e6309c08f08a491e5d1f9d6f48822b0e39b6d456357e459c8519c604e71c
+Caught an exception of type: ProviderError
+
+Confirmations (2/2): 100%|###############################################################################################| 2/2 [00:28<00:00, 14.36s/it]
+Confirmations (2/2): 100%|###############################################################################################| 2/2 [00:28<00:00, 14.45s/it]
+
+result =  0
+```
+
+
+
+
+
+![image-20240609182941720](./Images/image-20240609182941720.png)
+
+
+
+
+
+
+
+![image-20240609182952473](./Images/image-20240609182952473.png)
+
+
+
+
+
+
+
+https://sepolia.etherscan.io/tx/0x3712e6309c08f08a491e5d1f9d6f48822b0e39b6d456357e459c8519c604e71c
+
+![image-20240609183313307](./Images/image-20240609183313307.png)
+
+
+
+
+
+
+
+#### test 6/9/24 - 652PM
+
+
+
+![image-20240609185212551](./Images/image-20240609185212551.png)
+
+![image-20240609185226772](./Images/image-20240609185226772.png)
+
+
+
+
+
+
+
+![image-20240609185253828](./Images/image-20240609185253828.png)
+
+
+
+
+
+![image-20240609185535380](./Images/image-20240609185535380.png)
+
+
+
+
+
+https://sepolia.etherscan.io/tx/0xf1a56a86571fea90a4ea46f44f67cb5870c48e466134e47e0520707140e42374
+
+https://sepolia.etherscan.io/tx/0x3248d156e6d92a756655b050c1ecee92680a82024e3cb385dbd26518b73a3691
+
+
+
+
+
+![image-20240609185602670](./Images/image-20240609185602670.png)
+
+
+
+
+
+
+
+Few issues - 
+
+1) the Predict from Agent works sometims and limit is reached so the screenshots i had to include from before when it worked and also i put exceptiosn to input value.
+2) the extraction of value from result with AgentResult never worked for us so had to go with Input value even when Result is return from model.
+3) The Ethereum Sepolia SWAP for WETH and USDC pool is probably not reflecting current ETH value. so the formula is based on getting Current ETH value but the pool is not. So for testing purposes does not reflect correctly.
