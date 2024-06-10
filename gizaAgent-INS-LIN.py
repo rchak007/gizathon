@@ -590,7 +590,10 @@ if __name__ == "__main__":
     # Display in the sidebar
     st.sidebar.header("Model Information")
     st.sidebar.write("Model ID:", MODEL_ID)
-    st.sidebar.write("Version ID:", VERSION_ID)    
+    st.sidebar.write("Version ID:", VERSION_ID)  
+    st.sidebar.write("Endpoint ID:", 314)
+    st.sidebar.write("Endpoint URL ","https://endpoint-giza1-739-1-a8a598d9-7i3yxzspbq-ew.a.run.app")
+    
 
 
     # Initialize session state variables for prices
